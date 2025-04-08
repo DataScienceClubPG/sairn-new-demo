@@ -1,0 +1,11 @@
+[project]
+name = "sairn-new-demo"
+version = "0.1.0"
+description = "Gdańsk Apartment Market Demo"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ruff>=0.11.4",
+    "streamlit>=1.44.1",
+    "streamlit-folium>=0.24.0",
+]
