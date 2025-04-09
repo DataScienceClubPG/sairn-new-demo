@@ -67,3 +67,4 @@ The fake data generator creates realistic apartment listings with:
 
 This is a demo application using randomly generated data. All listings, prices, and other information are fictional and
 should not be used for real estate decisions.
+

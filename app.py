@@ -2,7 +2,7 @@ import folium
 import pandas as pd
 import streamlit as st
 from folium.plugins import MarkerCluster
-from streamlit_folium import folium_static
+from streamlit_folium import st_folium
 
 # Constants
 CENTER_LAT = 54.3520
@@ -141,6 +141,13 @@ def main():
         initial_sidebar_state="expanded",
     )
 
+    # Display logos at the top
+    logo_col1, logo_col2 = st.columns([1, 15], vertical_alignment="center")
+    with logo_col1:
+        st.image("pg.png", width=100)
+    with logo_col2:
+        st.image("dsc.png", width=100)
+
     # Header
     st.title("🏠 Gdańsk Apartment Market")
     st.warning(
@@ -169,7 +176,7 @@ def main():
     # Map
     with map_col:
         m = create_map(filtered_df)
-        folium_static(m, height=MAP_HEIGHT)
+        st_folium(m, height=MAP_HEIGHT)
 
     # Table
     with table_col:
